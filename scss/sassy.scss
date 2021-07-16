@@ -1,0 +1,560 @@
+@import "colores.scss";
+
+* {margin: 0; padding: 0;}
+
+body {text-align: center;}
+
+main {
+    background-image: linear-gradient(to top, $color5, $color3, $color2);
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    font-family:'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+h2 {
+    color: darken($color: $escalaGrises, $amount: 30%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px;
+    font-size: 25px;
+}
+
+p, h5 {
+    color: darken($color: $escalaGrises, $amount: 60%);
+    font-size: 20px;
+    font-family:'Montserrat', sans-serif;
+}
+
+ol {
+    li {
+        color: $colorJ;
+        padding: 5px;
+        list-style-type:decimal;
+        font-family:'Montserrat', sans-serif;
+    }
+}
+
+ul{
+    li {
+        color: $colorF;
+        padding: 5px;
+        list-style-type: none;
+        font-family:'Montserrat', sans-serif;
+    }
+}
+
+/* GENERALES /////////////////////////////////////////////////////////////////////////////////// */
+    
+    .header {
+        padding: 10px;
+        background-color: $color2;
+        &__logo{
+            color: darken($color: $escalaGrises, $amount: 100%);
+        }
+        &__menu{
+            padding: 0px 25%;
+        }
+        &__lista{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        &__item{
+            transition: all 0.75s;
+        }
+        &__item:hover {
+            background-color: lightskyblue;
+            color:black
+        }
+        a{
+            text-decoration: none;
+        }
+    }
+    
+    .footer {
+        background-color: lighten($color: $escalaGrises, $amount: 30%);
+        padding-top:20px;
+        &__p{
+            font-size: 14px;
+            color: darken($color: $escalaGrises, $amount: 100%);
+        }
+        &__rrss{
+            width: 40px;
+            height: auto;
+        }
+    }
+
+/* HOME //////////////////////////////////////////////////////////////////////////////////////// */
+    
+    .primeraParte {
+        display: grid;
+        grid-template-columns: 2fr 4fr 2fr;
+        grid-template-rows: 100%;
+        padding-top: 20px;
+        .carousel-item {
+            h2 {
+                padding-top: 20px;
+            } 
+        }
+    }
+    
+    .segundaParte {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr 3fr 1fr;
+        grid-template-rows: 100%;  
+        padding-top: 100px ;
+        color: $colorD;
+        &__nuestraHistoria {
+            order: 3;
+            h2 {color: $colorD;}
+            p {color: $colorD;}
+        }
+        &__iframeMaps {
+            order: 4;
+            h2 {color: $colorD;}
+            p {color: $colorD;}
+        }
+    }
+
+/* OPTIPLUS //////////////////////////////////////////////////////////////////////////////////// */
+
+    @mixin tiers ($colorFondo, $colorFuente){
+        margin: 0% 25%;
+        padding: 20px;
+        height: 70px; 
+        color: darken($color: $escalaGrises, $amount: 100%);           
+        text-transform: uppercase;
+        text-align:center;
+        background-color: $colorFondo;
+        color: $colorFuente;
+    }    
+
+    .oplus {
+        &__imagen{
+            width: 50%;
+        } 
+        &__condTier{
+            font-style: italic; 
+            padding: 10px;
+            font-size: 13px;
+        }
+        &__welcome{@include tiers ($welcome, lighten($color: $escalaGrises, $amount: 100%));} 
+        &__silver{@include tiers ($silver, lighten($color: $escalaGrises, $amount: 100%));}
+        &__gold{@include tiers ($gold, darken($color: $escalaGrises, $amount: 100%));}
+        &__beneficios{
+            margin: 0% 25%;
+            padding: 20px;
+            height: 70px; 
+            color: darken($color: $escalaGrises, $amount: 100%);
+            text-align:center;
+            background-color: $colorK;
+            color: white;
+        }
+        &__item{font-size: 20px;}
+        &__comoUnirse{
+            @extend .oplus__beneficios;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+        } 
+    }
+
+/* TURNOS ////////////////////////////////////////////////////////////////////////////////////// */
+
+    .infoTurnos {
+        &__h2{
+            font-weight: 800;
+        }
+        &__h3{
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        &__img{
+            width: 50%;
+        }
+    }
+
+/* ARMAZONES /////////////////////////////////////////////////////////////////////////////////// */
+    
+    .armazones{
+        &__tabla{
+            margin:50%;
+            background-color: lighten($color: $escalaGrises, $amount: 60%);
+            margin: 20px 10px;
+            display: grid; 
+            grid-template-columns: 1fr  2fr   2fr ;
+            grid-template-rows:    25px 150px 150px 150px ;
+        }
+        &__tituloH{
+            align-self: center;
+        }
+        &__tituloV{
+            align-self: center;
+        }
+        &__lista{
+            list-style-image: url(../IMG/li_glasses.png);
+            align-self: center;
+        }
+    }
+
+    #videoMio, #videoDeYoutube {
+        border: dashed 1px $colorD;
+    }
+
+    .contacto{
+        &__boton1{
+            @extend #botonReservar;
+            width: 100px !important;
+        }
+        &__boton2{
+            @extend #botonReservar;
+        }
+    }
+
+/* MEDIA QUERIE - Extra Small Devices ////////////////////////////////////////////////////////// */
+
+    @media only screen and (max-width: 600px){
+
+        img {width: 95%;}
+
+        .armazones{
+            &__tabla{
+                background-color: lighten($color: $escalaGrises, $amount: 60%);
+                padding: 10px ;
+                margin: 20px 10px;
+                display: grid; 
+                grid-template-columns: 1fr  2fr   2fr ;
+                grid-template-rows:    25px 200px 200px 200px ;
+                justify-content: space-evenly;
+            }
+            &__tituloH{
+                align-self: center;
+                font-size: 12px;
+            }
+            &__tituloV{
+                align-self: center;
+                font-size: 12px;
+            }
+            &__lista{
+                list-style-image: none;
+                font-size: 12px;
+                align-self: center;
+                padding-left: 0px;
+                font-weight: 800;
+            }
+        }
+
+        .contacto {
+            background-image: url(../IMG/fondo_contacto.jpg);
+            background-size: cover;
+            padding: 20px;
+            line-height: 25px;
+            &__h2{
+                padding-bottom: 10px;
+            }
+            &__input{
+                width: 100%;
+                height: 35px;
+            }
+            &__textarea{
+                width: 100%;
+                height: 100px;
+            }
+            #dropdownAsunto {
+                width: 100%;
+                height: 35px;
+            }
+            #checkbox {
+                height: 20px;
+            }
+        }
+
+        #botonReservar {
+            width: 100%;
+            height: 50px;
+        }
+
+
+        #dropdownTurno {
+            width: 100%;
+            height: 50px;
+        }
+
+        .primeraParte {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 100%;
+            padding-top: 0px;
+            .carousel-item {
+                h2 {
+                    padding-top: 20px;
+                }   
+                p {   
+                    color: darken($color: $escalaGrises, $amount: 100%);
+                    padding:10px;
+                } 
+            }
+        }   
+
+        .segundaParte {
+            padding-top: 0px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 100%;
+            &__nuestraHistoria {
+                background-color: lighten($color: $escalaGrises, $amount: 0%) ;
+                padding: 10%;
+                h2{
+                    color: darken($color: $escalaGrises, $amount: 100%);
+                }
+                p {
+                    color: darken($color: $escalaGrises, $amount: 100%);
+                }
+            }
+            &__iframeMaps {
+                background-color: lighten($color: $escalaGrises, $amount: 30%);
+                padding-bottom: 0px;
+                h2{
+                    padding: 10% 10% 0% 10%;
+                    color: darken($color: $escalaGrises, $amount: 100%);
+                }
+                p {
+                    padding: 10% 10% 0% 10%;
+                    color: darken($color: $escalaGrises, $amount: 100%);
+                }
+                iframe {
+                    padding: 0px;
+                }
+            }   
+        }
+
+        .infoTurnos {
+            &__img{
+                width: 100%;
+            }
+        }
+
+    }
+
+/* MEDIA QUERIE - Tablets ////////////////////////////////////////////////////////////////////// */
+
+    @media only screen and (min-width: 600px){
+
+        img {width: 75%;}
+
+        .armazones{
+            &__tabla{
+                margin:50%;
+                background-color: lighten($color: $escalaGrises, $amount: 60%);
+                margin: 20px 10px;
+                padding: 20px;
+                display: grid; 
+                grid-template-columns: 1fr  2fr   2fr ;
+                grid-template-rows:    25px 150px 150px 150px ;
+            }
+            &__tituloH{
+                align-self: center;
+            }
+            &__tituloV{
+                align-self: center;
+            }
+            &__lista{
+                list-style-image: url(../IMG/li_glasses.png);
+                align-self: center;
+            }
+        }
+
+        .contacto {
+            background-image: url(../IMG/fondo_contacto.jpg);
+            background-size: cover;
+            padding: 20px;
+            &__input{
+                width: 50%;
+                height: 35px;
+            }
+            &__textarea{
+                width: 80%;
+            }
+            #dropdownAsunto {
+                width: 50%;
+                height: 35px;
+            }
+            #checkbox {
+                height: 20px;
+            }
+        }
+
+        #botonReservar {
+            width: 75%;
+            height: 50px;
+        }
+
+        #dropdownTurno {
+            width: 75%;
+            height: 50px;
+        }
+
+        .primeraParte {
+            display: grid;
+            grid-template-columns: 2fr 4fr 2fr;
+            grid-template-rows: 100%;
+            background-color: lighten($color: $escalaGrises, $amount: 30%);
+            padding-top: 20px;
+            .carousel-item {
+                h2 {
+                    padding-top: 20px;
+                } 
+            }
+        }
+
+        .segundaParte {
+            display: grid;
+            grid-template-columns: 1fr 4fr 1fr 4fr 1fr;
+            grid-template-rows: 100%;  
+            padding-top: 100px;
+            &__nuestraHistoria {
+                transition:all 1s;
+                p{
+                    font-size: 12px;
+                }
+                iframe{
+                    width: 100%;height: 300px;
+                }
+            }
+            &__iframeMaps{
+                transition:all 1s;
+                p{
+                    font-size: 12px;
+                }
+                iframe{
+                    width: 100%;height: 300px;
+                }
+            }
+        }
+
+        .infoTurnos {
+            &__img{
+                width: 65%;
+            }
+        }
+
+    }
+
+/* MEDIA QUERIE - Laptops / Escritorio ///////////////////////////////////////////////////////// */
+
+    @media only screen and (min-width: 992px){
+
+        img {width: 70%;}
+        
+        .armazones{
+            &__tabla{
+                margin:50%;
+                background-color: lighten($color: $escalaGrises, $amount: 60%);
+                margin: 20px 10px;
+                padding: 30px;
+                display: grid; 
+                grid-template-columns: 1fr  2fr   2fr ;
+                grid-template-rows:    25px 150px 150px 150px ;
+            }
+            &__tituloH{
+                align-self: center;
+            }
+            &__tituloV{
+                align-self: center;
+            }
+            &__lista{
+                list-style-image: url(../IMG/li_glasses.png);
+                align-self: center;
+            }
+        }
+
+        .primeraParte {
+            display: grid;
+            grid-template-columns: 2fr 4fr 2fr;
+            grid-template-rows: 100%;
+            padding-top: 20px;
+            .carousel-item {
+                h2 {
+                    padding-top: 20px;
+                } 
+            }
+        }
+        .contacto {
+            background-image: url(../IMG/fondo_contacto.jpg);
+            background-size: cover;
+            padding: 20px;
+            border: 1px solid darken($color: $escalaGrises, $amount: 100%);
+            &__input{
+                width: 25%;
+                height: 35px;
+            }
+            &__textarea{
+                width: 50%;
+            }
+            #dropdownAsunto {
+                width: 25%;
+                height: 35px;
+            }
+            #checkbox {
+                height: 20px;
+            }
+        }
+
+        .segundaParte{
+            padding: 50px;
+            margin: 50px;
+            justify-content: space-evenly;    
+            &__nuestraHistoria {
+                p{
+                    font-size: 15px;
+                }
+                iframe{
+                    width: 100%;
+                    height: 300px;
+                }
+            }
+            &__iframeMaps{
+                p{
+                    font-size: 15px;
+                }
+                iframe{
+                    width: 100%;
+                    height: 300px;
+                }
+            }
+        } 
+
+        #botonReservar {
+            transition: all 0.75s;
+            width: 50%;
+            height: 50px;
+        }
+
+        #botonReservar:hover {
+            transform: scale(1.1);
+        }
+
+        #dropdownTurno{
+            width: 50%;
+            height: 50px;
+        }
+    
+        .infoTurnos {
+            &__img{
+                width: 50%;
+            }
+        }
+    
+    }

@@ -1,0 +1,419 @@
+/* RESUMIR PALETA DE COLORES
+DEJAR SOLO 5 COLORES Y LOGRAR MAS COLORES CON DARKEN O LIGHTEN */
+/* OTROS */
+/* TIERS */
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  text-align: center; }
+
+main {
+  background-image: linear-gradient(to top, #A7DBD8, #E0E4CC, #F38630);
+  padding: 20px; }
+
+a {
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold; }
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  padding-bottom: 20px; }
+
+h2 {
+  color: #313131;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold; }
+
+h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  padding: 5px;
+  font-size: 25px; }
+
+p, h5 {
+  color: black;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif; }
+
+ol li {
+  color: darkred;
+  padding: 5px;
+  list-style-type: decimal;
+  font-family: 'Montserrat', sans-serif; }
+
+ul li {
+  color: #962800;
+  padding: 5px;
+  list-style-type: none;
+  font-family: 'Montserrat', sans-serif; }
+
+/* GENERALES /////////////////////////////////////////////////////////////////////////////////// */
+.header {
+  padding: 10px;
+  background-color: #F38630; }
+  .header__logo {
+    color: black; }
+  .header__menu {
+    padding: 0px 25%; }
+  .header__lista {
+    display: flex;
+    justify-content: space-evenly; }
+  .header__item {
+    transition: all 0.75s; }
+  .header__item:hover {
+    background-color: lightskyblue;
+    color: black; }
+  .header a {
+    text-decoration: none; }
+
+.footer {
+  background-color: #cacaca;
+  padding-top: 20px; }
+  .footer__p {
+    font-size: 14px;
+    color: black; }
+  .footer__rrss {
+    width: 40px;
+    height: auto; }
+
+/* HOME //////////////////////////////////////////////////////////////////////////////////////// */
+.primeraParte {
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr;
+  grid-template-rows: 100%;
+  padding-top: 20px; }
+  .primeraParte .carousel-item h2 {
+    padding-top: 20px; }
+
+.segundaParte {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 3fr 1fr;
+  grid-template-rows: 100%;
+  padding-top: 100px;
+  color: #751f00; }
+  .segundaParte__nuestraHistoria {
+    order: 3; }
+    .segundaParte__nuestraHistoria h2 {
+      color: #751f00; }
+    .segundaParte__nuestraHistoria p {
+      color: #751f00; }
+  .segundaParte__iframeMaps {
+    order: 4; }
+    .segundaParte__iframeMaps h2 {
+      color: #751f00; }
+    .segundaParte__iframeMaps p {
+      color: #751f00; }
+
+/* OPTIPLUS //////////////////////////////////////////////////////////////////////////////////// */
+.oplus__imagen {
+  width: 50%; }
+
+.oplus__condTier {
+  font-style: italic;
+  padding: 10px;
+  font-size: 13px; }
+
+.oplus__welcome {
+  margin: 0% 25%;
+  padding: 20px;
+  height: 70px;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #3e7409;
+  color: white; }
+
+.oplus__silver {
+  margin: 0% 25%;
+  padding: 20px;
+  height: 70px;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #888888;
+  color: white; }
+
+.oplus__gold {
+  margin: 0% 25%;
+  padding: 20px;
+  height: 70px;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #ffd900;
+  color: black; }
+
+.oplus__beneficios, .oplus__comoUnirse {
+  margin: 0% 25%;
+  padding: 20px;
+  height: 70px;
+  color: black;
+  text-align: center;
+  background-color: royalblue;
+  color: white; }
+
+.oplus__item {
+  font-size: 20px; }
+
+.oplus__comoUnirse {
+  text-transform: uppercase;
+  margin-bottom: 50px; }
+
+/* TURNOS ////////////////////////////////////////////////////////////////////////////////////// */
+.infoTurnos__h2 {
+  font-weight: 800; }
+
+.infoTurnos__h3 {
+  font-weight: 800;
+  text-transform: uppercase; }
+
+.infoTurnos__img {
+  width: 50%; }
+
+/* ARMAZONES /////////////////////////////////////////////////////////////////////////////////// */
+.armazones__tabla {
+  margin: 50%;
+  background-color: white;
+  margin: 20px 10px;
+  display: grid;
+  grid-template-columns: 1fr  2fr   2fr;
+  grid-template-rows: 25px 150px 150px 150px; }
+
+.armazones__tituloH {
+  align-self: center; }
+
+.armazones__tituloV {
+  align-self: center; }
+
+.armazones__lista {
+  list-style-image: url(../IMG/li_glasses.png);
+  align-self: center; }
+
+#videoMio, #videoDeYoutube {
+  border: dashed 1px #751f00; }
+
+.contacto__boton1 {
+  width: 100px !important; }
+
+/* MEDIA QUERIE - Extra Small Devices ////////////////////////////////////////////////////////// */
+@media only screen and (max-width: 600px) {
+  img {
+    width: 95%; }
+  .armazones__tabla {
+    background-color: white;
+    padding: 10px;
+    margin: 20px 10px;
+    display: grid;
+    grid-template-columns: 1fr  2fr   2fr;
+    grid-template-rows: 25px 200px 200px 200px;
+    justify-content: space-evenly; }
+  .armazones__tituloH {
+    align-self: center;
+    font-size: 12px; }
+  .armazones__tituloV {
+    align-self: center;
+    font-size: 12px; }
+  .armazones__lista {
+    list-style-image: none;
+    font-size: 12px;
+    align-self: center;
+    padding-left: 0px;
+    font-weight: 800; }
+  .contacto {
+    background-image: url(../IMG/fondo_contacto.jpg);
+    background-size: cover;
+    padding: 20px;
+    line-height: 25px; }
+    .contacto__h2 {
+      padding-bottom: 10px; }
+    .contacto__input {
+      width: 100%;
+      height: 35px; }
+    .contacto__textarea {
+      width: 100%;
+      height: 100px; }
+    .contacto #dropdownAsunto {
+      width: 100%;
+      height: 35px; }
+    .contacto #checkbox {
+      height: 20px; }
+  #botonReservar, .contacto__boton1, .contacto__boton2 {
+    width: 100%;
+    height: 50px; }
+  #dropdownTurno {
+    width: 100%;
+    height: 50px; }
+  .primeraParte {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100%;
+    padding-top: 0px; }
+    .primeraParte .carousel-item h2 {
+      padding-top: 20px; }
+    .primeraParte .carousel-item p {
+      color: black;
+      padding: 10px; }
+  .segundaParte {
+    padding-top: 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100%; }
+    .segundaParte__nuestraHistoria {
+      background-color: #7d7d7d;
+      padding: 10%; }
+      .segundaParte__nuestraHistoria h2 {
+        color: black; }
+      .segundaParte__nuestraHistoria p {
+        color: black; }
+    .segundaParte__iframeMaps {
+      background-color: #cacaca;
+      padding-bottom: 0px; }
+      .segundaParte__iframeMaps h2 {
+        padding: 10% 10% 0% 10%;
+        color: black; }
+      .segundaParte__iframeMaps p {
+        padding: 10% 10% 0% 10%;
+        color: black; }
+      .segundaParte__iframeMaps iframe {
+        padding: 0px; }
+  .infoTurnos__img {
+    width: 100%; } }
+
+/* MEDIA QUERIE - Tablets ////////////////////////////////////////////////////////////////////// */
+@media only screen and (min-width: 600px) {
+  img {
+    width: 75%; }
+  .armazones__tabla {
+    margin: 50%;
+    background-color: white;
+    margin: 20px 10px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr  2fr   2fr;
+    grid-template-rows: 25px 150px 150px 150px; }
+  .armazones__tituloH {
+    align-self: center; }
+  .armazones__tituloV {
+    align-self: center; }
+  .armazones__lista {
+    list-style-image: url(../IMG/li_glasses.png);
+    align-self: center; }
+  .contacto {
+    background-image: url(../IMG/fondo_contacto.jpg);
+    background-size: cover;
+    padding: 20px; }
+    .contacto__input {
+      width: 50%;
+      height: 35px; }
+    .contacto__textarea {
+      width: 80%; }
+    .contacto #dropdownAsunto {
+      width: 50%;
+      height: 35px; }
+    .contacto #checkbox {
+      height: 20px; }
+  #botonReservar, .contacto__boton1, .contacto__boton2 {
+    width: 75%;
+    height: 50px; }
+  #dropdownTurno {
+    width: 75%;
+    height: 50px; }
+  .primeraParte {
+    display: grid;
+    grid-template-columns: 2fr 4fr 2fr;
+    grid-template-rows: 100%;
+    background-color: #cacaca;
+    padding-top: 20px; }
+    .primeraParte .carousel-item h2 {
+      padding-top: 20px; }
+  .segundaParte {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 4fr 1fr;
+    grid-template-rows: 100%;
+    padding-top: 100px; }
+    .segundaParte__nuestraHistoria {
+      transition: all 1s; }
+      .segundaParte__nuestraHistoria p {
+        font-size: 12px; }
+      .segundaParte__nuestraHistoria iframe {
+        width: 100%;
+        height: 300px; }
+    .segundaParte__iframeMaps {
+      transition: all 1s; }
+      .segundaParte__iframeMaps p {
+        font-size: 12px; }
+      .segundaParte__iframeMaps iframe {
+        width: 100%;
+        height: 300px; }
+  .infoTurnos__img {
+    width: 65%; } }
+
+/* MEDIA QUERIE - Laptops / Escritorio ///////////////////////////////////////////////////////// */
+@media only screen and (min-width: 992px) {
+  img {
+    width: 70%; }
+  .armazones__tabla {
+    margin: 50%;
+    background-color: white;
+    margin: 20px 10px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr  2fr   2fr;
+    grid-template-rows: 25px 150px 150px 150px; }
+  .armazones__tituloH {
+    align-self: center; }
+  .armazones__tituloV {
+    align-self: center; }
+  .armazones__lista {
+    list-style-image: url(../IMG/li_glasses.png);
+    align-self: center; }
+  .primeraParte {
+    display: grid;
+    grid-template-columns: 2fr 4fr 2fr;
+    grid-template-rows: 100%;
+    padding-top: 20px; }
+    .primeraParte .carousel-item h2 {
+      padding-top: 20px; }
+  .contacto {
+    background-image: url(../IMG/fondo_contacto.jpg);
+    background-size: cover;
+    padding: 20px;
+    border: 1px solid black; }
+    .contacto__input {
+      width: 25%;
+      height: 35px; }
+    .contacto__textarea {
+      width: 50%; }
+    .contacto #dropdownAsunto {
+      width: 25%;
+      height: 35px; }
+    .contacto #checkbox {
+      height: 20px; }
+  .segundaParte {
+    padding: 50px;
+    margin: 50px;
+    justify-content: space-evenly; }
+    .segundaParte__nuestraHistoria p {
+      font-size: 15px; }
+    .segundaParte__nuestraHistoria iframe {
+      width: 100%;
+      height: 300px; }
+    .segundaParte__iframeMaps p {
+      font-size: 15px; }
+    .segundaParte__iframeMaps iframe {
+      width: 100%;
+      height: 300px; }
+  #botonReservar, .contacto__boton1, .contacto__boton2 {
+    transition: all 0.75s;
+    width: 50%;
+    height: 50px; }
+  #botonReservar:hover, .contacto__boton1:hover, .contacto__boton2:hover {
+    transform: scale(1.1); }
+  #dropdownTurno {
+    width: 50%;
+    height: 50px; }
+  .infoTurnos__img {
+    width: 50%; } }

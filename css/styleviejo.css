@@ -1,0 +1,247 @@
+/* ETIQUETAS /////////////////////////////////////////////////////////////////////////////////// */
+
+    * {margin: 0;padding: 0;}
+    body {text-align: center;}
+    header {padding: 10px; background-color: #F38630;}
+    main {background-image: linear-gradient(to top,#A7DBD8, #E0E4CC, #c4b0a1); padding: 20px;}
+    footer {padding: 20px; background-color: #A7DBD8;} footer p {color: black; font-size: 15px;}
+    a {text-decoration: none; font-family:'Montserrat', sans-serif; font-weight: bold;}
+    h1 {font-family: 'Montserrat', sans-serif; font-size: 40px; padding-bottom: 20px;}
+    h2 {color: rgb(60, 60, 60); font-family: 'Montserrat', sans-serif;}
+    h3, h4 {color: royalblue; font-family: 'Montserrat', sans-serif; padding: 5px; font-size: 25px;}
+    p, h5 {color: rgb(45, 45, 45); font-size: 20px; font-family:'Montserrat', sans-serif;}
+    li {list-style-type: none; font-family:'Montserrat', sans-serif;}
+    ol li {color: darkred; padding: 5px; list-style-type:decimal}
+    ul li {color: rgb(150, 40, 0); padding: 5px;}
+
+/* TODOS LOS IDs /////////////////////////////////////////////////////////////////////////////// */
+
+    #logo {color:black;}#nuestraHistoria {order: 3;} #iframeMaps {order: 4;}
+    #videoMio, #videoDeYoutube {border: dashed 2px brown;} #checkbox {height: 20px;}
+    #articulosHome {display: flex; flex-direction: column; justify-content: space-evenly; align-items: center;}
+    #tituloTextoAvisoCovid {color: black; letter-spacing: 10px; font-family: Arial, Helvetica, sans-serif; text-decoration: underline;}
+    #avisoCovid {animation-name: avisoCovid; animation-iteration-count: infinite; animation-duration: 2s;}
+    #tablaArmazones {background-color:rgb(211, 211, 211); margin: 20px 10px; display: grid; grid-template-columns: 1fr  2fr   2fr; grid-template-rows:    25px 150px 150px 150px;}
+    #tablaArmazones ul {list-style-image: url(../IMG/li_glasses.png); align-self: center;}
+    
+/* TODAS LAS CLASES //////////////////////////////////////////////////////////////////////////// */
+
+    .nav {display: flex; justify-content: center;}
+    .imgOptiPlusYTurnos {width: 50%;}
+    .tituloConItalics {font-style: italic;}
+    .formatoArticulos2 {color: rgb(117, 31, 0);}
+    .enviarTurno {height: 30px;}
+    .hijosTablaArmazones {align-self: center;}
+    .textoCarousel h5, .textoCarousel p {color: black;padding-top: 20px;}
+    .primera-parte #carousel {padding: 5px;background-color: rgb(100, 100, 100, 0.5)}
+    .col-sm-12, .col-md-6 {padding: 0px 40px; padding-top: 10px; padding-bottom: 80px;}
+    .textoAvisoCovid {color: black; text-transform: uppercase; font-size: 15px; line-height: 30px;}
+    .primera-parte {display: grid; grid-template-columns: 2fr 4fr 2fr; grid-template-rows: 100%;}
+    .segundaParte {display: grid; grid-template-columns: 1fr 3fr 1fr 3fr 1fr; grid-template-rows: 100%; padding-top: 100px;}
+
+/* KEYFRAME //////////////////////////////////////////////////////////////////////////////////// */
+
+    @keyframes avisoCovid {
+        0% {background-color: #ff6767;}
+        50% {background-color: red;}
+        100%{background-color: #ff6767;}  
+    }
+
+/* MEDIA QUERIE - Extra Small Devices ////////////////////////////////////////////////////////// */
+@media only screen and (max-width: 600px){
+
+    img {width: 95%;}
+
+    input, select, #dropdownAsunto {
+        width: 100%;
+        height: 35px;
+    }
+    
+    textarea {
+        width: 100%;
+        height: 100px;
+    }
+    
+    #avisoCovid {
+        background-color: #ff6767;
+        padding: 10%;
+    }
+    
+    #tablaTiposDeArmazones td, tr {
+        background-color:rgb(211, 211, 211);
+        text-align: center;
+        padding: 4px 30px;
+    }
+    
+    #tablaTiposDeArmazones ul {list-style-image: url(../IMG/li_glasses.png);}
+    
+    #contacto {
+        background-image: url(../IMG/fondo_contacto.jpg);
+        background-size: cover;
+        padding: 20px;
+        line-height: 25px;
+    }
+    .imgOptiPlusYTurnos {
+        width: 100%;
+    }
+    #contacto h2 {padding-bottom: 10px;}
+
+    #botonReservar {
+        width: 100%;
+        height: 50px;
+    }
+    
+    #dropdownTurno {
+        width: 100%;
+        height: 50px;
+    }
+
+    .textoCarousel p {
+        color: black;
+        padding:10px;
+    }
+    
+    .primera-parte {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100%;
+    }
+
+    .segundaParte {
+        padding-top: 0px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100%;
+    }
+
+    #nuestraHistoria {
+        background-color: rgb(100, 100, 100, 0.75) ;
+        padding: 10%;
+    }
+    
+    #nuestraHistoria h3, #nuestraHistoria p {
+        color: rgb(260, 260, 260);
+    }
+
+    #iframeMaps {
+        background-color: rgba(100, 100, 100, 0.5);
+        padding-bottom: 35px;
+    }
+
+    #iframeMaps h3, #iframeMaps p {
+        padding: 10% 10% 0% 10%;
+        color:black
+    }
+    
+    #iframeMaps iframe {
+        padding: 0px;
+    }
+
+}
+
+/* MEDIA QUERIE - Tablets ////////////////////////////////////////////////////////////////////// */
+@media only screen and (min-width: 600px){
+
+    img {width: 75%;}
+
+    input, select, #dropdownAsunto {
+        width: 50%; height: 35px;
+    }
+    
+    textarea {width: 80%;}
+
+    #avisoCovid {
+        background-color: #ff6767;
+        padding: 15px;
+    }
+    
+    #tablaTiposDeArmazones td, tr {
+        background-color:rgb(211, 211, 211);
+        text-align: center;
+        padding: 4px 30px;
+    }
+    
+    #tablaTiposDeArmazones ul {list-style-image: url(../IMG/li_glasses.png);}
+    
+    #contacto {
+        background-image: url(../IMG/fondo_contacto.jpg);
+        background-size: cover;
+        padding: 20px;
+    }
+
+    #botonReservar {
+        width: 75%;
+        height: 50px;
+    }
+    
+    #dropdownTurno {
+        width: 75%;
+        height: 50px;
+    }
+
+
+    .primera-parte #carousel {
+        padding: 5px;
+        background-color: rgb(100, 100, 100, 0.5)
+    }
+
+}
+
+/* MEDIA QUERIE - Laptops / Escritorio ///////////////////////////////////////////////////////// */
+@media only screen and (min-width: 992px){
+    
+    img {
+        width: 70%;
+    }
+
+    input, select, #dropdownAsunto {
+        width: 25%;
+        height: 35px;
+    }
+
+    textarea {width: 50%;}
+
+    #avisoCovid {
+        background-color: #ff6767;
+        padding: 15px;
+    }
+
+    #tablaTiposDeArmazones td, tr {
+        background-color:rgb(211, 211, 211);
+        text-align: center;
+        padding: 4px 30px;
+    }
+
+    #tablaTiposDeArmazones ul {list-style-image: url(../IMG/li_glasses.png);}
+   
+
+    .primera-parte #carousel {
+        padding: 30px;
+        background-color: rgb(100, 100, 100, 0.5)
+    }
+
+    #contacto {
+        background-image: url(../IMG/fondo_contacto.jpg);
+        background-size: cover;
+        padding: 20px;
+        border: 1px solid black;
+    }
+
+    #nuestraHistoria, #iframeMaps {
+        transition: all 1s;
+    }
+
+    #nuestraHistoria:hover {transform: scale(1.1);}
+    
+    #iframeMaps:hover {transform: scale(1.1);}
+
+    #botonReservar {
+        width: 50%;
+        height: 50px;
+    }
+    #dropdownTurno{
+        width: 50%;
+        height: 50px;
+    }    
+
+}
