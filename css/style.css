@@ -56,8 +56,6 @@ ul li {
   background-color: #F38630; }
   .header__logo {
     color: black; }
-  .header__menu {
-    padding: 0px 25%; }
   .header__lista {
     display: flex;
     justify-content: space-evenly; }
@@ -73,17 +71,15 @@ ul li {
   background-color: #cacaca;
   padding-top: 20px; }
   .footer__p {
-    font-size: 14px;
-    color: black; }
+    font-size: 16px;
+    color: black;
+    padding-bottom: 20px; }
   .footer__rrss {
-    width: 40px;
+    width: 60px;
     height: auto; }
 
 /* HOME //////////////////////////////////////////////////////////////////////////////////////// */
 .primeraParte {
-  display: grid;
-  grid-template-columns: 2fr 4fr 2fr;
-  grid-template-rows: 100%;
   padding-top: 20px; }
   .primeraParte .carousel-item h2 {
     padding-top: 20px; }
@@ -202,6 +198,15 @@ ul li {
 @media only screen and (max-width: 600px) {
   img {
     width: 95%; }
+  .header__menu {
+    width: 100%; }
+  .header__lista {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px; }
+  .header__item {
+    width: 100%;
+    padding: 10px 0px; }
   .armazones__tabla {
     background-color: white;
     padding: 10px;
@@ -247,15 +252,13 @@ ul li {
     width: 100%;
     height: 50px; }
   .primeraParte {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100%;
     padding-top: 0px; }
     .primeraParte .carousel-item h2 {
       padding-top: 20px; }
     .primeraParte .carousel-item p {
       color: black;
-      padding: 10px; }
+      padding: 10px;
+      font-size: 15px; }
   .segundaParte {
     padding-top: 0px;
     display: grid;
@@ -267,7 +270,8 @@ ul li {
       .segundaParte__nuestraHistoria h2 {
         color: black; }
       .segundaParte__nuestraHistoria p {
-        color: black; }
+        color: black;
+        font-size: 15px; }
     .segundaParte__iframeMaps {
       background-color: #cacaca;
       padding-bottom: 0px; }
@@ -276,16 +280,54 @@ ul li {
         color: black; }
       .segundaParte__iframeMaps p {
         padding: 10% 10% 0% 10%;
-        color: black; }
+        color: black;
+        font-size: 15px; }
       .segundaParte__iframeMaps iframe {
-        padding: 0px; }
+        padding: 0px;
+        height: 400px; }
   .infoTurnos__img {
+    width: 100%; }
+  .footer__p {
+    font-size: 12px; }
+  .oplus ul {
+    margin: 0px;
+    padding: 0px; }
+  .oplus ol {
+    margin: 0px;
+    padding: 0px; }
+  .oplus__imagen {
+    width: 100%; }
+  .oplus__beneficios, .oplus__comoUnirse {
+    width: 100%;
+    margin: 0px; }
+  .oplus__condTier {
+    width: 100%;
+    margin: 0px; }
+  .oplus__welcome {
+    width: 100%;
+    margin: 0px; }
+  .oplus__silver {
+    width: 100%;
+    margin: 0px; }
+  .oplus__gold {
+    width: 100%;
+    margin: 0px; }
+  .oplus__comoUnirse {
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 10px;
+    padding-top: 20px; }
+  #videoDeYoutube iframe {
     width: 100%; } }
 
 /* MEDIA QUERIE - Tablets ////////////////////////////////////////////////////////////////////// */
 @media only screen and (min-width: 600px) {
   img {
     width: 75%; }
+  .header__menu {
+    padding: 0% 15%; }
+  .header__item {
+    padding: 0px 10px; }
   .armazones__tabla {
     margin: 50%;
     background-color: white;
@@ -322,9 +364,6 @@ ul li {
     width: 75%;
     height: 50px; }
   .primeraParte {
-    display: grid;
-    grid-template-columns: 2fr 4fr 2fr;
-    grid-template-rows: 100%;
     background-color: #cacaca;
     padding-top: 20px; }
     .primeraParte .carousel-item h2 {
@@ -371,9 +410,6 @@ ul li {
     list-style-image: url(../IMG/li_glasses.png);
     align-self: center; }
   .primeraParte {
-    display: grid;
-    grid-template-columns: 2fr 4fr 2fr;
-    grid-template-rows: 100%;
     padding-top: 20px; }
     .primeraParte .carousel-item h2 {
       padding-top: 20px; }
