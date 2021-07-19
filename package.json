@@ -14,5 +14,13 @@
     "nodemon": "^2.0.12"
   },
   "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guido-pasciucco/opticaPasciucco.git"
+  },
+  "bugs": {
+    "url": "https://github.com/guido-pasciucco/opticaPasciucco/issues"
+  },
+  "homepage": "https://github.com/guido-pasciucco/opticaPasciucco#readme",
   "description": ""
 }
